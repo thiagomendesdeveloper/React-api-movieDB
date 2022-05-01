@@ -1,0 +1,61 @@
+.movie{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-column-gap: 20px;
+    grid-row-gap: 55px;
+    grid-template-rows: auto;
+    transition: 1s;
+
+    .movie__card{
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        //align-items: center;
+        text-align: center;
+        cursor: pointer;
+        transition: .20s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    .movie__h2{
+        height: 20px;
+        font-size: 15px;
+        text-align: left;
+        color: #fff;
+    }
+
+    .movie__img{
+        object-fit: cover;
+        width: 100%;
+        max-height: 300px;
+        border-radius: 18px;
+
+    }
+
+}
+
+.Banner__menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie__error{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.banner__icon{
+    width: 15px;
+    border: 1px solid #3887D8;
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover{
+        background: rgba(0, 0, 0, 0.205);
+    }
+}

@@ -1,0 +1,38 @@
+.header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo{
+        width: 60px;
+        height: auto;
+    }
+    .header__search{
+        background: none;
+        width: 400px;
+        border: none;
+        border: 2px solid #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        color :#fff;
+    }
+    .header__flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__btn{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .header__lupa{
+        width: 30px;
+        height: 100%;
+        margin-left: 10px;
+        display: none;
+    }
+}
