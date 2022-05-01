@@ -14,9 +14,7 @@ export function useFetch(url){
           })
         .then(function (response) {
             setData(response.data)
-            console.log(response)
         }).catch( error => {
-            console.log(error)
             setData({
                 error: true,
                 message: "Erro ao carregar filmes por favor tente novamente mais tarde"
@@ -24,7 +22,6 @@ export function useFetch(url){
         })
         
     },[url])
-    console.log(data)
     return { data }
 
 }

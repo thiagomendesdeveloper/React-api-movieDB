@@ -4,12 +4,10 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr  ;
+    grid-template-columns: 1fr  ;
     .Banner__img{
-        //width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        margin: auto;
+        width: 100%;
+        
     }
 
     .Info__h3{
@@ -43,4 +41,15 @@
     align-items: center;
     padding: 60px;
 
+}
+
+@media screen and (min-width:700px){
+    .Banner{
+        grid-template-columns: 1fr 1fr  ;
+    }
+    .Banner__img{
+        max-height: 300px;
+        object-fit: cover;
+        margin: auto;
+    }
 }

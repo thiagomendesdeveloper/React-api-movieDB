@@ -21,21 +21,21 @@ export default function Card(){
     }
     
     return(
-        <>
-        <section className='container'>
-            <div className="Banner__menu">
-                <div>
-                    <div className='banner__line'></div>
-                    <h2>Lista de filmes</h2>
-                </div>
-                <div>
-                    <img className="banner__icon" onClick={navigationPageLeft} src={Left} alt="" />
-                    <img className="banner__icon" onClick={navigationPageRight} src={Right} alt="" />
+        <div className="movie__app">
+            <section className='container'>
+                <div className="Banner__menu">
+                    <div>
+                        <div className='banner__line'></div>
+                        <h2>Lista de filmes</h2>
+                    </div>
+                    <div className="banner__set">
+                        <img className="banner__icon" onClick={navigationPageLeft} src={Left} alt="" />
+                        <img className="banner__icon" onClick={navigationPageRight} src={Right} alt="" />
 
+                    </div>
                 </div>
-            </div>
-        </section>
-            
+            </section>
+                
             {(() => {
                 if (data.error) {
                     return <div className="movie__error">{data.message}</div>
@@ -54,7 +54,7 @@ export default function Card(){
                     )
                 }
             })()}    
-            
-        </>
+        
+        </div>
     )
 }

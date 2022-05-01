@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import Header from '../../components/Header'
 import './style.scss'
 import Calendar from '../../assets/data.png'
 import View from "../../assets/website.png"
+import logo from '../../assets/logo-movie.png'
 
 export default function Movie(){
 
@@ -14,11 +15,16 @@ export default function Movie(){
     const base_img = "https://www.themoviedb.org/t/p/w220_and_h330_face"
 
     const {data} = useFetch(`${api_base}/movie/${id}?api_key=${api_key}&language=pt-br`)
-    console.log(data)
 
     return(
         <>
-            <Header />  
+            <header className='container'>
+            <div className='header'>
+                <Link to="/"><img className="header__logo" src={logo} alt="" /></Link>
+                <div className='header__flex'>
+                </div>
+            </div>
+        </header> 
             <section className="Detail">
                 <div className="container">
                     <div className="Detail__grid">
@@ -33,7 +39,7 @@ export default function Movie(){
                             <div className="Detail__tags">
                                 {data.genres?.map(e => {
                                     return(
-                                        <div className="Detail__tag">{e.name}</div>
+                                        <div key={e.id} className="Detail__tag">{e.name}</div>
                                     )
                                 })}
                             </div>
